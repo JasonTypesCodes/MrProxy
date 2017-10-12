@@ -4,9 +4,9 @@ const fs = require('fs');
 const port = 8484;
 
 const options = {
-  key: fs.readFileSync('certs/self-signed-key.pem'),
+  key: fs.readFileSync('../certs/self-signed-key.pem'),
   passphrase: '1234',
-  cert: fs.readFileSync('certs/self-signed-cert.pem')
+  cert: fs.readFileSync('../certs/self-signed-cert.pem')
 };
 
 const sslServer = https.createServer(options, (req, res) => {
