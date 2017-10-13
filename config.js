@@ -3,11 +3,12 @@ const fs = require('fs');
 
 function buildConfig() {
   return {
-    remoteHost: 'localhost',
-    remotePort: 8181,
-    remoteSSL: false,
+    remoteHost: 'objectcomputing.com',
+    remotePort: 443,
+    remoteSSL: true,
     remoteTimeout: 12000,
 
+    proxyHost: 'localhost',
     proxyPort: 8282,
     proxySSL: true,
     proxyCert: fs.readFileSync('certs/self-signed-cert.pem'),
